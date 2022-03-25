@@ -1,0 +1,12 @@
+<!-- <h1>Selected phone: {{ selectedPhone?.name }}</h1> -->
+
+<div *ngIf="selectedPhone">
+    selected phone:
+    <div> {{ selectedPhone.id }} </div>
+    <div> {{ selectedPhone.name }} </div>
+    <div> {{ selectedPhone.description }} </div>
+</div>
+
+<ul *ngFor="let prod of products">
+    <li [class.selected]="prod === selectedPhone"><button (click)="onSelect(prod)">click</button> {{ prod.name }}</li>
+</ul>

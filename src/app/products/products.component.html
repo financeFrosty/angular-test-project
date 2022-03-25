@@ -1,0 +1,14 @@
+
+<div id="products">
+    <div *ngFor="let prod of products" class="product_item">
+        <button 
+            class="product_item_button" 
+            [class.selected]="prod === selectedProd"
+            (click)="onSelect(prod)">
+                select
+        </button>
+        {{ prod.name }}
+    </div>
+    <app-product-details [prod]="selectedProd"></app-product-details>
+</div>
+

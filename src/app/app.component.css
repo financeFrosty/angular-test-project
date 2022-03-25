@@ -1,0 +1,18 @@
+#app {
+    display: grid;
+    grid-template:
+        "head head" auto
+        "products messages" auto
+        / 1fr 1fr;
+    
+}
+#head {
+    text-align: center;
+    grid-area: head;
+}
+app-products {
+    grid-area: products;
+}
+app-messages {
+    grid-area: messages;
+}
